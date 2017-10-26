@@ -1,0 +1,119 @@
+<div class="main">
+  <br/>
+  <h2>let's type the alphabet!</h2>
+  <form>
+    <div>
+      <input type="text" [(ngModel)]="letter" name="letter" width="10px" size="2" maxlength=1 style="text-align: center;">
+    </div>
+  </form>
+  <br/>
+  <div class="input">
+  <b>letter :</b> {{letter}}
+  <br/>
+  <br/>
+
+  <div *ngIf="letter == 'A'||letter == 'a'">
+      <img src="http://www.school-clipart.com/school_clipart_images/the_alphabet__the_letter_a_is_for_apple_0515-0908-2513-1538_SMU.jpg"
+        width="200px" height="=200px">
+    </div>
+    <div *ngIf="letter == 'B'||letter == 'b'">
+      <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__b_is_for_ball_0515-0908-2513-1647_SMU.jpg"
+        width="200px" height="=200px">
+    </div>
+  <div *ngIf="letter == 'C'||letter == 'c'">
+    <img src="http://www.school-clipart.com/school_clipart_images/alphabet__the_letter_c_is_for_cat_0515-0908-2513-1752_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'D'||letter == 'd'">
+    <img src="http://www.school-clipart.com/school_clipart_images/alphabet__the_letter_d_is_for_dog_0515-0908-2513-1844_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'E'||letter == 'e'">
+    <img src="http://www.school-clipart.com/school_clipart_images/alphabet__the_letter_e_is_for_elephant_0515-0908-2513-1957_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'F'||letter == 'f'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__f_is_for_fire_0515-0908-2513-2050_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'G'||letter == 'g'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letter_g_is_for_grapes__letters_of_the_alphabet_0515-0908-2513-2150_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'H'||letter == 'h'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letter_h_is_for_hammer__letters_of_the_alphabet_0515-0908-2513-2235_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'I'||letter == 'i'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__i_is_for_ice_cream_0515-0908-2513-2427_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'J'||letter == 'j'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__j_is_for_jam_0515-0908-2513-2519_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'K'||letter == 'k'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__k_is_for_kite_0515-0908-2513-2607_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'L'||letter == 'l'">
+    <img src="http://www.school-clipart.com/school_clipart_images/alphabet__l_is_for_ladybug_0515-0908-2513-2703_SMU.jpg" width="200px"
+      height="=200px">
+  </div>
+  <div *ngIf="letter == 'M'||letter == 'm'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__m_is_for_mouse_0515-0908-2513-2758_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'N'||letter == 'n'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__n_is_for_necklace_0515-0908-2513-2858_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'O'||letter == 'o'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__o_is_for_octopus_0515-0908-2513-3009_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'P'||letter == 'p'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__letter_p_is_for_pencil_0515-0908-2513-3122_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'Q'||letter == 'q'">
+    <img src="http://www.school-clipart.com/school_clipart_images/q_is_for_quarter__letters_of_the_alphabet_0515-0908-2513-3219_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'R'||letter == 'r'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__letter_r_is_for_rainbow_0515-0908-2802-0940_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'S'||letter == 's'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__letter_s_is_for_sandwich_0515-0908-2802-1101_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'T'||letter == 't'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__letter_t_is_for_television_0515-0908-2802-1204_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'U'||letter == 'u'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__u_is_for_umbrella_0515-0908-2802-1253_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'V'||letter == 'v'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__v_is_for_violin_0515-0908-2802-1353_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'W'||letter == 'w'">
+    <img src="http://www.school-clipart.com/school_clipart_images/letters_of_the_alphabet__w_is_for_wagon_0515-0908-2802-1441_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'X'||letter == 'x'">
+    <img src="http://www.school-clipart.com/school_clipart_images/alphabet__letters__the_letter_x_is_for_xray_0515-0908-2802-1541_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'Y'||letter == 'y'">
+    <img src="http://www.school-clipart.com/school_clipart_images/alphabet__letters__the_letter_y_is_for_yarn_0515-0908-2802-1633_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+  <div *ngIf="letter == 'Z'||letter == 'z'">
+    <img src="http://www.school-clipart.com/school_clipart_images/alphabet__letters__the_letter_z_is_for_zebra_0515-0908-2802-1729_SMU.jpg"
+      width="200px" height="=200px">
+  </div>
+</div>

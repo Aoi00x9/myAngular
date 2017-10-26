@@ -1,0 +1,14 @@
+
+.main{
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center;
+    background-color: #000000;
+    width: 600px;
+    height: 450px; 
+    color: #FFFF00;
+    margin: auto;
+}
+.input{
+    color: #FF0000;
+}
