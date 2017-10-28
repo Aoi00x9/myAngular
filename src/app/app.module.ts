@@ -7,12 +7,24 @@ import { FormsModule } from '@angular/forms';
 import { GetphotoService } from './services/getphoto.service';
 import { HttpModule } from '@angular/http'
 import { RouterModule, Routes } from '@angular/router';
-import { AlphabetComponent } from './components/alphabet/alphabet.component'
+import { AlphabetComponent } from './components/alphabet/alphabet.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component'
+import { LoginService } from './services/login.service'
+import { AuthguardGuard } from './authguard.guard'
+import { UserManagementService } from './services/user-management.service';
+import { UserManagementComponent } from './components/user-management/user-management.component'
 
-const appRoutes:Routes = [
-  {path:"", component:UserComponent},
-  {path:"about", component:AboutmeComponent},
-  {path:"alphabet", component:AlphabetComponent}
+const appRoutes: Routes = [
+  { path: "", component: LoginComponent },
+  { path: "home", canActivate: [AuthguardGuard],component: HomeComponent},
+  { path: "user", canActivate: [AuthguardGuard],component: UserComponent},
+  { path: "aboutme", canActivate: [AuthguardGuard],component: AboutmeComponent},
+  {path: 'user-management',canActivate: [AuthguardGuard],component: UserManagementComponent},
+  {path: '**',canActivate: [AuthguardGuard],component: LoginComponent}
+
 ]
 
 @NgModule({
@@ -20,7 +32,12 @@ const appRoutes:Routes = [
     AppComponent,
     UserComponent,
     AboutmeComponent,
-    AlphabetComponent
+    AlphabetComponent,
+    LoginComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +45,12 @@ const appRoutes:Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [GetphotoService],
+  providers: [
+    GetphotoService,
+    LoginService,
+    AuthguardGuard,
+    UserManagementService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
