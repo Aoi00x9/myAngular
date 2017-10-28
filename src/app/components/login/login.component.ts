@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GetphotoService } from '../../services/getphoto.service';
+import { LoginService } from '../../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,66 +9,37 @@ import { GetphotoService } from '../../services/getphoto.service';
 })
 export class LoginComponent implements OnInit {
 
-  private my_name: string;
-  private age: number;
-  private email: string;
-  private address: {
-    street: string,
-    city: string,
-    province: string,
-    postcode: string
-  }
-  private skills: string[];
-  private isEditable: boolean = true;
-  private photoList: Photo[];
+  private username: string;
+  private password: string;
+  private result_text: string;
 
-  constructor(private getphotoService: GetphotoService) { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
 
-    this.my_name = "Donald Trump"
-    this.age = 56;
-    this.email = "Trump_lnwZa@gmail.com";
-    this.address = {
-      street: "99 Dindeang-Road Dindeang",
-      city: "Dindeang",
-      province: "Bangkok",
-      postcode: "10400"
-    }
-    this.skills = ["Gaming", "Eating"];
-
-    this.getphotoService.getPhotoList().subscribe((response) => {
-      this.photoList = response;
-      this.photoList.splice(4, 4995);
-    })
 
   }
 
-  addSkill(skill) {
-    this.skills.unshift(skill);
+  login(username, password) {
+
+    this.loginService.login(username, password).subscribe((response) => {
+      if (response.success == "true") {
+        // this.result_text = "passed !";
+        this.loginService.setUserLoggedIn();
+        this.router.navigate(['home']);
+        console.log("Logging in ...");
+      } else {
+        this.result_text = "incorrect username or password!";
+      }
+    })
     return false;
   }
 
-  removeSkill(skill) {
-    this.skills.forEach((element, index) => {
-      if (element == skill) {
-        this.skills.splice(index, 1);
-      }
-    });
-  }
-
-  toggleEdit() {
-    this.isEditable = !this.isEditable;
-  }
-
 }
 
-
-interface Photo {
-  albumId: number;
-  id: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
+interface LoginRespone {
+  success: string;
+  status: string;
 }
+
 

@@ -20,7 +20,6 @@ export class LoginService {
     this.isUserLoggedIn = false;
   }
 
-
   getUserLoggedIn() {
     return this.isUserLoggedIn;
   }
