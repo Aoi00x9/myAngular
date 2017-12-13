@@ -38,7 +38,7 @@ export class UserComponent implements OnInit {
 
     this.getphotoService.getPhotoList().subscribe((response) => {
       this.photoList = response;
-      this.photoList.splice(4,4995);
+      this.photoList.splice(9,4990);
     })
   }
 

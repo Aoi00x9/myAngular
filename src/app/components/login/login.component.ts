@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
 
     this.loginService.login(username, password).subscribe((response) => {
       if (response.success == "true") {
-        // this.result_text = "passed !";
         this.loginService.setUserLoggedIn();
         this.router.navigate(['home']);
         console.log("Logging in ...");

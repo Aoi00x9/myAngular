@@ -1,0 +1,24 @@
+<div class="divCenter">
+  <p>
+    JOIN NOW
+  </p>
+  <div class="imgGoogle">
+    <img width="80" src="http://vivaxpresslogistics.com/wp-content/uploads/2017/05/Logomakr_4CmoRu.png">
+  </div>
+  <br>
+  <br>
+  <br>
+  <form>
+    <label for="username">Username</label>
+    <input type="text" [(ngModel)]="username" name="username"><br>
+    <label for="password">Password</label>
+    <input type="text" [(ngModel)]="password" name="password"><br>
+    <label for="email">Email</label>
+    <input type="text" [(ngModel)]="email" name="email"><br>
+  </form>
+  <br><br><br><br><br>
+  <div class="registerBtn" (click)="onAdd()"><strong>SIGN UP</strong></div>
+  <br>
+  <h1 id="waring">{{result_text}}</h1>
+
+</div>

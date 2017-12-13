@@ -22,3 +22,44 @@ header{
 	display:inline-block;
 	padding:10px;
 }
+.divCenter{
+	margin: 20px auto;
+	align-items: center;
+	width: 1000px;
+}
+.loginBtn{
+	color: white;
+	font-family: verdana;
+	text-align: center;
+	background: #2874A6;
+	border-radius: 6px;
+	line-height: 30px;
+	width: 80px;
+	height: 30px;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.loginBtn:hover{
+	background: #58D68D;
+}
+
+.registerBtn{
+	color: white;
+	font-family: verdana;
+	text-align: center;
+	background: #2874A6;
+	border-radius: 6px;
+	line-height: 30px;
+	width: 105px;
+	height: 30px;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.registerBtn:hover{
+	background: #DC7633;
+}
+

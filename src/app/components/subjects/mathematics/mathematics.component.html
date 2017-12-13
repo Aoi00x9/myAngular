@@ -1,0 +1,27 @@
+<div>
+  <form>
+    <label for="title">What do you need to know?</label>
+    <input type="text" [(ngModel)]="title" name="title">
+  </form>
+
+  <button class="registerBtn" (click)="onAdd()">
+    <strong>ASK YOUR QUESTION</strong>
+  </button>
+
+  <form>
+    <label for="answer">Answer</label>
+    <input type="text" [(ngModel)]="answer" name="answer">
+  </form>
+
+  <button class="registerBtn" (click)="isAnswer()">
+    <strong>ASK YOUR QUESTION</strong>
+  </button>
+  <div>
+    <ul>
+      <li *ngFor='let q of questionList'>{{q.title}}
+        <button (click)="onDelete(q.title)"> X </button>
+      </li>
+    </ul>
+  </div>
+
+</div>
