@@ -1,26 +1,16 @@
 header{
 	text-align: center;
-	padding: 20px 0;
-	font-size: 30px;
+	padding: 15px 0;
+	font-size: 15px;
 	border-bottom: 2px solid #eee;
 }
-
-.nav{
-	border:1px solid #0000ff;
-	border-width:1px 0;
-	list-style:none;
-	margin:0;
-	padding:0;
-	text-align:center;
+.subject-nav{
+	text-align: center;
+	margin-top: 20px;
 }
 
-.nav li{
-	display:inline;
-}
-
-.nav a{
-	display:inline-block;
-	padding:10px;
+nav{
+	background:#000099; 
 }
 .divCenter{
 	margin: 20px auto;
@@ -34,9 +24,10 @@ header{
 	background: #2874A6;
 	border-radius: 6px;
 	line-height: 30px;
-	width: 80px;
+	width: 90px;
 	height: 30px;
 	float: right;
+	margin-top: 20px;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	cursor: pointer;
@@ -62,4 +53,26 @@ header{
 .registerBtn:hover{
 	background: #DC7633;
 }
+.logo{
+	float: left;
+	margin-top: 20px;
+}
 
+.logoutBtn{
+	float: right;
+	color: white;
+	font-family: verdana;
+	text-align: center;
+	background: #2874A6;
+	border-radius: 6px;
+	line-height: 30px;
+	width: 90px;
+	height: 30px;
+	margin-top: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.logoutBtn:hover{
+	background: #FF3333;
+}
+  

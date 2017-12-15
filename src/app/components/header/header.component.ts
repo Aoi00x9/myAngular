@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login.service';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'; 
+//import logo from '../img/logo.png'
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  
   private isLogin;
   constructor(private loginService: LoginService, private router: Router) { }
 
@@ -26,8 +28,7 @@ export class HeaderComponent implements OnInit {
   }
 
   register(){
-    //this.router.navigate(['register']);
-    this.router.navigate(['mathematics']);
+    this.router.navigate(['register']);
   }
 }
 

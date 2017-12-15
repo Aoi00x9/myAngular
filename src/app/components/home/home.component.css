@@ -22,7 +22,8 @@
 	background: #58D68D;
 }
 .post{
-    padding: 100px;
+	padding: 80px;
+	border-radius: 5px;
     background: #F7F9F9;
 }
 
@@ -30,4 +31,10 @@ textarea{
 	background:#58D68D;
 	width: 500px;
 	height: 50px; 
+}
+ul { list-style:none;}
+li {list-style:none;}
+.subject-nav{
+	text-align: center;
+	margin-top: 5px;
 }

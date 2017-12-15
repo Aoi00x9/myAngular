@@ -32,25 +32,11 @@ export class MathematicsComponent implements OnInit {
   }
 
   onAdd(){
-    //สร้าง q_id ด้วย
-
-    this.title = this.title + "/user"
-    this.postService.testAdd(this.q_id, this.username, this.subject, this.title, this.time)
-    .subscribe((res) => {
-      console.log(res)
-    })
-    //สร้าง q_id ด้วย 
-
   }
 
   onDelete(title: string) {
     this.postService.testDelete(title).subscribe(res => {
       console.log(res)
-    })
-  }
-  isAnswer(q_id){
-    this.postService.testUpdate(q_id, this.answer).subscribe((res) => {
-    console.log(res)
     })
   }
 

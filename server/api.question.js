@@ -16,17 +16,27 @@ router.get('/show', function (req, res) {
     })
 })
 
+router.get('/show/biology', function (req, res) {
+    mongoClient.connect(mongo_string, function (req, db) {
+        db.collection('questions')
+            .find({subject:"biology"})
+            .toArray()
+            .then(questions => {
+                const output = { result: 'ok', message: questions }
+                res.json(output)
+            })
+        db.close()
+    })
+})
+
 router.post('/add', function (req, res) {
     mongoClient.connect(mongo_string, function (err, db) {
 
         const data = {
-            q_id: req.body.q_id,
             username: req.body.username,
             subject: req.body.subject,
             title: req.body.title,
-            time: req.body.time,
-            answer1: req.body.answer1,
-            answer2: req.body.answer2
+            date: req.body.date
         }
         db.collection('questions')
             .insertOne(data, (err, result) => {
@@ -50,7 +60,7 @@ router.delete('/delete/:title', function (req, res) {
     })
 })
 
-router.put('/update/:q_id', function (req, res) {
+/**router.put('/update/:q_id', function (req, res) {
     mongoClient.connect(mongo_string, function (err, db) {
 
         const query = {
@@ -65,6 +75,6 @@ router.put('/update/:q_id', function (req, res) {
             })
         db.close()
     })
-})
+})**/
 
 module.exports = router

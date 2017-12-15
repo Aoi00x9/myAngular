@@ -1,0 +1,36 @@
+.main{
+    background-color: #FFEB3B;
+    padding: 200px;
+}
+.post{
+    
+    margin: auto;
+    margin-top: 20px;
+	align-items: center;
+    width: 1000px;
+    border-radius: 8px;
+    background: #F7F9F9;
+}
+.askBtn{
+    float: left;
+	color: white;
+	font-family: verdana;
+	text-align: center;
+	background: #000099;
+	border-radius: 6px;
+	line-height: 30px;
+	width: 200px;
+	height: 30px;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.askBtn:hover{
+	background: #0033CC;
+}
+ul { list-style:none;}
+li {list-style:none;}
+textarea{
+    margin-right: 20px;
+}

@@ -11,9 +11,14 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 ]
 })
 export class HomeComponent implements OnInit {
-  private answerList: Answer[]
   public modalRef: BsModalRef
-
+  private answerList: Answer[]
+  private questionList: Question[]
+  private username:string
+  private subject:string
+  private title:string
+  private date
+ 
 
   constructor(private postService: PostService, private modalService: BsModalService) { }
   
@@ -21,22 +26,26 @@ export class HomeComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
   }
 
-  
-
   ngOnInit() {
-    this.getAllTitle()
+    this.getAllPost()
   }
 
-  isAnswer(answer) {
-    this.postService.addPost(answer).subscribe((res) => {
+  /*isAnswer() {
+    this.postService.addPost().subscribe((res) => {
       console.log(res)
       this.getAllTitle()
     })
+  }*/
+  askQuestion(){
+    this.postService.addPost(this.username, this.subject, this.title, this.date).subscribe((res) => {
+      console.log(res)
+      this.getAllPost()
+    })
   }
 
-  getAllTitle() {
+  getAllPost() {
     this.postService.getAllPost().subscribe(res => {
-      this.answerList = res
+      this.questionList = res
       console.log(res)
     })
   }
@@ -49,5 +58,12 @@ interface Answer {
   post_id: number
   post_user: string
   title: string
+}
+
+interface Question {
+  username:string
+  subject:string
+  title:string
+  date:string
 }
 

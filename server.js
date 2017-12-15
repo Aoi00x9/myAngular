@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/api', require('./server/api.js'))
 app.use('/api.post', require('./server/api.post.js'))
 app.use('/api.question', require('./server/api.question.js'))
+app.use('/api.answer', require('./server/api.answer.js'))
 app.use('*', function (req, res) {
     res.sendFile(path.join(__dirname, './index.html'))
 })

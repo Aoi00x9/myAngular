@@ -20,6 +20,7 @@ import { RegisterComponent } from './components/register/register.component'
 import { RegisterService } from './services/register.service'
 import { PostService } from './services/post.service'
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown'
 import { MathematicsComponent } from './components/subjects/mathematics/mathematics.component';
 import { EnglishComponent } from './components/subjects/english/english.component';
 import { ChemistryComponent } from './components/subjects/chemistry/chemistry.component';
@@ -35,7 +36,12 @@ const appRoutes: Routes = [
   { path: "home",component: HomeComponent},
   //ลองดูเฉยๆ
   {path:"user",component:UserComponent},
+  { path: "biology",component: BiologyComponent},
+  { path: "chemistry",component: ChemistryComponent},
+  { path: "computer",component: ComputerComponent},
+  { path: "english",component: EnglishComponent},
   { path: "mathematics",component: MathematicsComponent},
+  { path: "physics",component: PhysicsComponent},
   //{ path: "user", canActivate: [AuthguardGuard],component: UserComponent},
   { path: "aboutme", canActivate: [AuthguardGuard],component: AboutmeComponent},
   {path: 'user-management',canActivate: [AuthguardGuard],component: UserManagementComponent},
@@ -67,6 +73,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     ModalModule.forRoot(),
+    BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

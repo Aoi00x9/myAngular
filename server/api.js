@@ -20,6 +20,7 @@ router.post('/add', function (req, res) {
     mongoClient.connect(mongo_string, function (err, db) {
 
         const data = {
+            
             username : req.body.username,
             password : req.body.password,
             email : req.body.email
